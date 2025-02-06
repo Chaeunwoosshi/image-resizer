@@ -17,14 +17,21 @@
             margin-bottom: 20px;
             font-size: 18px;
         }
-
+      input{
+        margin:5px 0;
+      }
         .input-group {
             margin-bottom: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
+       #bgColor{
+          width:50%;
+          float:center;
+          vertical-align:center;
+          text-align:center;
+         }
         .input-group label {
             margin-bottom: 5px;
         }
@@ -37,7 +44,7 @@
         }
 
         input[type="file"], input[type="text"], input[type="color"], input[type="number"] {
-            padding: 5px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
             background-color: #fff;
@@ -45,6 +52,10 @@
             width: 100%;
             box-sizing: border-box;
         }
+       input[type="color"] {
+  height: 35px;
+}
+
 
         img {
             max-width: 100%;
@@ -125,7 +136,7 @@
             <input type="number" id="fontSize" placeholder="Font size" value="10">
         </div>
     </div>
-    <div class="input-group">
+    <div class="input-group bg-color">
         <label for="bgColor">Background Color</label>
         <input type="color" id="bgColor" value="#000000">
     </div>
@@ -182,7 +193,7 @@
                 // Draw background rectangle with border-radius in the top left corner
                 const rectX = canvasData.width - textWidth - 2 * padding;
                 const rectY = canvasData.height - textHeight - 2 * padding;
-                ctx.fillStyle = bgColor.value + '80'; // Add transparency to the background color
+                ctx.fillStyle = bgColor.value + '30'; // Add transparency to the background color
                 ctx.beginPath();
                 ctx.moveTo(rectX + borderRadius, rectY);
                 ctx.lineTo(rectX + textWidth + 2 * padding, rectY);
