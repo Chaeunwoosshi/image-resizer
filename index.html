@@ -177,8 +177,8 @@
         function updateImage() {
             if (cropper) {
                 const canvasData = cropper.getCroppedCanvas({
-                    width: 160,
-                    height: 240,
+                    width: 640,
+                    height: 960,
                     fillColor: 'transparent' // Allow transparency
                 });
                 const ctx = canvasData.getContext('2d');
